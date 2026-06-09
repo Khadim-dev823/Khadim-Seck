@@ -1,0 +1,25 @@
+body {
+    font-family: 'Times New Roman';
+    margin: 0;
+    padding: 0;
+    background-color: lightskyblue;
+}
+.class1 { color: firebrick;
+    text-align: center;
+    font-size: 24px;
+}
+.liste { background-color: lightgreen;
+    list-style-type: square;
+    padding-left: 20px;
+    color: goldenrod;}
+    .form {
+        background-color: red}
+        div {
+            color: black;
+            text-align: center;
+        }
+        .entête {
+            background-color: lightblue;
+            padding: 10px;
+            text-align: start;
+        }
