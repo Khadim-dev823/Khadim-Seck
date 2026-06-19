@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de recherche avancée</title>
+</head>
+
+<body>
+    <form action="#" method="get"></form>
+
+    <fieldset>
+        <legend>Recherche avancée</legend>
+        <label for="champ_search">Rechercher :</label>
+        <input type="search" id="champ_search" name="champ_search" placeholder="Titre, auteur, mot-clé…" autofocus
+            required>
+        <input type="submit" value="Rechercher">
+    </fieldset> <br> <br>
+    <fieldset>
+        <legend>Affiner la recherche</legend>
+        <label for="type_document">Type de document :</label> <br>
+        <input type="checkbox" id="livre" name="type_document" value="livre">
+        <label for="livre">Livre</label> <br>
+        <input type="checkbox" id="article" name="type_document" value="article">
+        <label for="article">Article</label> <br>
+        <input type="checkbox" id="these" name="type_document" value="these">
+        <label for="these">Thèse</label> <br>
+        <input type="checkbox" id="Rapport" name="type_document" value="autre">
+        <label for="Rapport">Rapport</label> <br>
+        <input type="checkbox" id="Magazine" name="type_document" value="autre">
+        <label for="Magazine">Magazine</label> <br> <br>
+        <label for="domaine">Domaine :</label>
+        <select id="domaine" name="domaine">
+            <optgroup label="Sciences exactes">
+                <option value="mathematiques">Mathématiques</option>
+                <option value="physique">Physique</option>
+                <option value="chimie">Chimie</option>
+            </optgroup>
+            <optgroup label="Sciences humaines">
+                <option value="histoire">Histoire</option>
+                <option value="sociologie">Sociologie</option>
+                <option value="psychologie">Psychologie</option>
+            </optgroup>
+            <optgroup label="Informatique">
+                <option value="programmation">Programmation</option>
+                <option value="reseaux">Réseaux</option>
+                <option value="ia">Intelligence artificielle</option>
+            </optgroup>
+            <optgroup label="Autres">
+                <option value="art">Art</option>
+                <option value="musique">Musique</option>
+                <option value="sport">Sport</option>
+            </optgroup>
+        </select> <br> <br>
+
+        <label for="annee_debut">De :</label>
+        <input type="number" id="annee_debut" name="annee_debut" min="1900" max="2025">
+        <label for="annee_fin">À :</label>
+        <input type="number" id="annee_fin" name="annee_fin" min="1900" max="2025"> <br> <br>
+        <label for="langues">Langues :</label> <br>
+        <select multiple size="4">
+            <option value="francais">Français</option>
+            <option value="anglais">Anglais</option>
+            <option value="arabe">Arabe</option>
+            <option value="wolof">Wolof</option>
+        </select> <br> <br>
+        <label for="disponibilite">Disponibilité :</label> <br>
+        <input type="radio" id="tous" name="disponibilite" value="tous" checked>
+        <label for="tous">Tous les documents</label>
+        <input type="radio" id="disponibles" name="disponibilite" value="disponibles">
+        <label for="disponibles">Disponibles uniquement</label> <br> <br>
+        <label for="Résultats par page">Résultats par page</label>
+        <select>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select> <br> <br>
+        <input type="submit" value="Appliquer les filtres">
+        <input type="reset" value="Réinitialiser">
+
+
+    </fieldset>
+</body>
+
+</html>

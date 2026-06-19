@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier d'admission universitaire</title>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>État civil et identité</legend>
+            <label for="civilité">Civilité:</label> <br> <br>
+            <select id="civilité" name="civilité">
+                <option value="M.">M.</option>
+                <option value="Mme">Mme</option>
+                <option value="Dr">Dr</option>
+                <option value="Pr">Pr</option>
+            </select> <br> <br>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required> <br> <br>
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required> <br> <br>
+            <label for="date_naissance">Date de naissance:</label>
+            <input type="date" id="date_naissance" name="date_naissance" required> <br> <br>
+            <label for="lieu_naissance">Lieu de naissance:</label>
+            <input type="text" id="lieu_naissance" name="lieu_naissance"> <br> <br>
+            <label for="nationalité">Nationalité:</label>
+            <input list="pays_africains" id="nationalité" name="nationalité" required>
+            <datalist id="pays_africains">
+                <option value="Sénégal">
+                <option value="Gambie">
+                <option value="Botswana">
+                <option value="Algérie">
+                <option value="Cameroun">
+                <option value="Cap-Vert">
+                <option value="Tchad">
+                <option value="Comores">
+            </datalist> <br> <br>
+            <label for="numéro de piéce d'indentité">Numéro de pièce d'identité:</label>
+            <input type="text" id="numéro de piéce d'indentité" name="numéro de piéce d'indentité" pattern="[0-9]{12}"
+                required> <br> <br>
+            <label for="type de piéce d'indentité">Photo d'identité:</label>
+            <input type="file" id="type de piéce d'indentité" name="type de piéce d'indentité"
+                accept="image/jpeg,image/png" required> <br> <br>
+        </fieldset> <br> <br>
+        <fieldset>
+            <legend>Coordonnées</legend>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required> <br> <br>
+            <label for="confirmation_email">Confirmation email:</label>
+            <input type="email" id="confirmation_email" name="confirmation_email" required> <br> <br>
+            <label for="telephone_principal">Téléphone principal:</label>
+            <input type="tel" id="telephone_principal" name="telephone_principal" pattern="[0-9]{9}" required> <br> <br>
+            <label for="telephone_secondaire">Téléphone secondaire:</label>
+            <input type="tel" id="telephone_secondaire" name="telephone_secondaire" pattern="[0-9]{9}"> <br> <br>
+            <label for="adresse_postale">Adresse postale complète:</label>
+            <textarea id="adresse_postale" name="adresse_postale" required></textarea> <br> <br>
+            <label for="région">Région:</label>
+            <select id="région" name="région">
+                <option value="">Sélectionnez une région</option>
+                <option value="Dakar">Dakar</option>
+                <option value="Diourbel">Diourbel</option>
+                <option value="Fatick">Fatick</option>
+                <option value="Kaffrine">Kaffrine</option>
+                <option value="Kolda">Kolda</option>
+                <option value="Louga">Louga</option>
+                <option value="Matam">Matam</option>
+                <option value="Saint-Louis">Saint-Louis</option>
+                <option value="Tambacounda">Tambacounda</option>
+                <option value="Thiès">Thiès</option>
+                <option value="Ziguinchor">Ziguinchor</option>
+                <option value="Casamance">Casamance</option>
+                <option value="Sédhiou">Sédhiou</option>
+                <option value="Grindel">Grindel</option>
+            </select> <br> <br>
+            <fieldset>
+                <legend>Cursus académique</legend>
+                <label for="diplome_obtenu">Diplôme obtenu:</label>
+                <select id="diplome_obtenu" name="diplome_obtenu">
+                    <option value="BFEM">BFEM</option>
+                    <option value="BAC">BAC</option>
+                    <option value="Licence">Licence</option>
+                    <option value="Master">Master</option>
+                    <option value="Autre">Autre</option>
+                </select> <br> <br>
+                <label for="mention">Mention:</label> <br>
+                <input type="radio" id="passable" name="mention" value="Passable">
+                <label for="passable">Passable</label> <br>
+                <input type="radio" id="assez_bien" name="mention" value="Assez Bien">
+                <label for="assez_bien">Assez Bien</label> <br>
+                <input type="radio" id="bien" name="mention" value="Bien">
+                <label for="bien">Bien</label> <br>
+                <input type="radio" id="tres_bien" name="mention" value="Très Bien">
+                <label for="tres_bien">Très Bien</label> <br>
+                <input type="radio" id="excellent" name="mention" value="Excellent">
+                <label for="excellent">Excellent</label> <br>
+                <label for="annee_obtention">Année d'obtention:</label>
+                <input type="number" id="annee_obtention" name="annee_obtention" min="2000" max="2025" required> <br>
+                <br>
+                <label for="etablissement_origine">Établissement d'origine:</label>
+                <input type="text" id="etablissement_origine" name="etablissement_origine" required> <br> <br>
+                <label for="releve_notes">Relevé de notes:</label>
+                <input type="file" id="releve_notes" name="releve_notes" accept=".pdf" required> <br> <br>
+                <label for="autres_diplomes">Autres diplômes ou certifications:</label>
+                <textarea id="autres_diplomes" name="autres_diplomes"
+                    placeholder="Saisissez les autres diplômes ou certifications obtenus..."></textarea>
+            </fieldset> <br> <br>
+            <fieldset>
+                <legend>Formation souhaitée</legend>
+                <label for="filiere_1">Filière demandée en 1er choix:</label>
+                <select id="filiere_1" name="filiere_1">
+                    <optgroup label="Informatique">
+                        <option value="informatique_parcours1">Parcours 1</option>
+                        <option value="informatique_parcours2">Parcours 2</option>
+                        <option value="informatique_parcours3">Parcours 3</option>
+                    </optgroup>
+                    <optgroup label="Gestion">
+                        <option value="gestion_parcours1">Parcours 1</option>
+                        <option value="gestion_parcours2">Parcours 2</option>
+                        <option value="gestion_parcours3">Parcours 3</option>
+                    </optgroup>
+                    <optgroup label="Sciences">
+                        <option value="sciences_parcours1">Parcours 1</option>
+                        <option value="sciences_parcours2">Parcours 2</option>
+                        <option value="sciences_parcours3">Parcours 3</option>
+                    </optgroup>
+                    <optgroup label="Lettres">
+                        <option value="lettres_parcours1">Parcours 1</option>
+                        <option value="lettres_parcours2">Parcours 2</option>
+                        <option value="lettres_parcours3">Parcours 3</option>
+                    </optgroup>
+                </select> <br> <br>
+                <label for="filiere_2">Filière demandée en 2e choix:</label>
+                <select id="filiere_2" name="filiere_2">
+                    <optgroup label="Informatique">
+                        <option value="informatique_parcours1">Parcours 1</option>
+                        <option value="informatique_parcours2">Parcours 2</option>
+                        <option value="informatique_parcours3">Parcours 3</option>
+                    </optgroup>
+                    <optgroup label="Gestion">
+                        <option value="gestion_parcours1">Parcours 1</option>
+                        <option value="gestion_parcours2">Parcours 2</option>
+                        <option value="gestion_parcours3">Parcours 3</option>
+                    </optgroup>
+                    <optgroup label="Sciences">
+                        <option value="sciences_parcours1">Parcours 1</option>
+                        <option value="sciences_parcours2">Parcours 2</option>
+                        <option value="sciences_parcours3">Parcours 3</option>
+                    </optgroup>
+                    <optgroup label="Lettres">
+                        <option value="lettres_parcours1">Parcours 1</option>
+                        <option value="lettres_parcours2">Parcours 2</option>
+                        <option value="lettres_parcours3">Parcours 3</option>
+                    </optgroup>
+                </select> <br> <br>
+                <label>Régime d'études souhaité:</label> <br>
+                <input type="radio" id="présentiel" name="regime_etudes" value="Présentiel">
+                <label for="présentiel">Présentiel</label> <br>
+                <input type="radio" id="distanciel" name="regime_etudes" value="Distanciel">
+                <label for="distanciel">Distanciel</label> <br>
+                <input type="radio" id="hybride" name="regime_etudes" value="Hybride">
+                <label for="hybride">Hybride</label> <br> <br>
+                <label>Langues maîtrisées:</label> <br>
+                <input type="checkbox" id="francais" name="langues_maitrisees" value="Français">
+                <label for="francais">Français</label> <br>
+                <input type="checkbox" id="anglais" name="langues_maitrisees" value="Anglais">
+                <label for="anglais">Anglais</label> <br>
+                <input type="checkbox" id="arabe" name="langues_maitrisees" value="Arabe">
+                <label for="arabe">Arabe</label> <br>
+                <input type="checkbox" id="autre_langue" name="langues_maitrisees" value="Autre">
+                <label for="autre_langue">Autre</label>
+                <input type="text" id="autre_langue_text" name="autre_langue_text"
+                    placeholder="Précisez l'autre langue"> <br> <br>
+                <label for="niveau_anglais">Niveau d'anglais:</label>
+                <input type="range" id="niveau_anglais" name="niveau_anglais" min="0" max="5">
+            </fieldset> <br> <br>
+            <fieldset>
+                <legend>Motivation et documents</legend>
+                <label for="lettre_motivation">Lettre de motivation:</label> <br>
+                <textarea id="lettre_motivation" name="lettre_motivation" rows="8" minlength="200" maxlength="2000"
+                    required></textarea> <br> <br>
+                <label for="connaissance_universite">Comment avez-vous connu notre université?</label> <br>
+                <select id="connaissance_universite" name="connaissance_universite">
+                    <option value="salon_etudiant">Salon étudiant</option>
+                    <option value="recommandation">Recommandation</option>
+                    <option value="internet">Internet</option>
+                    <option value="autre">Autre</option>
+                </select> <br> <br>
+                <label for="document_joint">Document joint complémentaire:</label>
+                <input type="file" id="document_joint" name="document_joint" accept=".pdf,.doc,.docx">
+            </fieldset> <br> <br>
+            <fieldset>
+                <legend>Déclaration et soumission</legend>
+                <input type="checkbox" id="certification" name="certification" required>
+                <label for="certification">Je certifie l'exactitude des informations fournies</label> <br> <br>
+                <input type="checkbox" id="politique_confidentialite" name="politique_confidentialite" required>
+                <label for="politique_confidentialite">J'accepte la politique de confidentialité</label> <br> <br>
+                <input type="hidden" name="annee_candidature" value="2025">
+                <input type="submit" value="Soumettre ma candidature">
+                <input type="reset" value="Réinitialiser">
+                <p> <b>⚠ Vérifiez vos informations avant de soumettre. Toute fausse
+                        déclaration entraîne l'annulation de la candidature.</b></p>
+            </fieldset>
+</body>
+</html>
